@@ -7,10 +7,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          I LOVE YOU
+          My name is Mridul and I'm going to master React!
         </p>
         <a className="App-link" target="_blank" rel="noopener noreferrer">
-          SAKSHI
+          isthatsb
         </a>
       </header>
     </div>
