@@ -6,27 +6,23 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
-
     this.state = {
-      name:{firstname:'Sakshi', lastname:'Beniwal'},
-      occupation : 'Graphic Designer'
+      players:[
+        { name: 'Steph Curry'},
+        { name: 'Michael Jordan'},
+        { name: 'LeBron James'},
+        { name: 'Giannis Antetokounmpo'},
+        { name: 'Shaq O\'Neal'},
+      ]
     };
   }
   render(){
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Hi {this.state.name.firstname} {this.state.name.lastname} I am {this.state.occupation}</p>
-          <button 
-            onClick={() => {
-              this.setState({name:{firstname:'Mridul',lastname:'Mathur'}, occupation:'Web Developer'});
-              console.log(this.state);
-            }}
-          >
-            Change Name
-          </button>
-        </header>
+    return(
+      <div className="App"> 
+        { this.state.players.map((player) => {
+            return <h1>{player.name}</h1>;
+          })
+        }
       </div>
     );
   }}
