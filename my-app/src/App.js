@@ -1,6 +1,4 @@
 import { Component } from 'react';
-
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -8,19 +6,28 @@ class App extends Component {
     super();
     this.state = {
       players:[
-        { name: 'Steph Curry'},
-        { name: 'Michael Jordan'},
-        { name: 'LeBron James'},
-        { name: 'Giannis Antetokounmpo'},
-        { name: 'Shaq O\'Neal'},
+        { name: 'Steph Curry',
+          id : '12d2j431'
+        },
+        { name: 'Michael Jordan',
+          id : '12d2j432'},
+        { name: 'LeBron James',
+          id : '12d2j433'
+        },
+        { name: 'Giannis Antetokounmpo',
+          id : '12d2j434'
+        },
+        { name: 'Shaq O\'Neal',
+          id : '12d2j435'
+        },
       ]
     };
   }
   render(){
     return(
       <div className="App"> 
-        { this.state.players.map((player) => {
-            return <h1>{player.name}</h1>;
+        {this.state.players.map((player) => {
+            return <div key={player.id}><h1>{player.name}</h1></div>;//when ever we use map we need to have a key to highest element i.e. Div here
           })
         }
       </div>
